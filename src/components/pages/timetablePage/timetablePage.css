@@ -1,0 +1,51 @@
+.timetable-wrapper{
+    max-width: 822px;
+    margin: 0 auto;
+}
+.timetable__title{
+    font-family: 'Open Sans';
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    border-radius: 5px;
+    background: url(../../../resources/title-animation.jpg) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aitf 80s linear infinite;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+}
+.timetable__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.timetable__item{
+    background-color: rgb(0,0,0, .7);
+    text-align: center;
+    padding-top: 20px;
+    border: #fff 2px solid;
+    border-radius: 50px;
+    padding: 50px 0px 30px 0px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+.list__item{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.item__title{
+    font-size: 39px;
+    color: cyan;
+}
+@media(max-width: 850px){
+    .timetable__container{
+        justify-content: center;
+        grid-template-columns: 70%;
+    }
+}
